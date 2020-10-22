@@ -3,14 +3,7 @@
 import express from "express";
 import bodyParser from "body-parser";
 import _ from "./utilities/env";
-import routes from "./routes/router";
-import logger from "./utilities/logger";
 import cors from "cors";
-
-import {
-  validateCognitoToken,
-  authenticationForLocalTesting,
-} from "./middlewares/authentication";
 
 const app = express();
 
@@ -28,11 +21,6 @@ app.use(
     extended: true
   })
 );
-
-// app.use(authenticationForLocalTesting);
-app.use(validateCognitoToken);
-
-app.use(routes);
 
 app.listen(process.env.PORT, (error, server) => {
   if (error) {
