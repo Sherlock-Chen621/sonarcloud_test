@@ -1,7 +1,7 @@
 {
-  "name": "bitspawn-backend-steam",
+  "name": "sonarcloud-test",
   "version": "1.0.0",
-  "description": "bitspawn-backend-steam",
+  "description": "sonarcloud-test",
   "scripts": {
     "start": "npm run prod",
     "server": "babel-node ./src/index.js",
