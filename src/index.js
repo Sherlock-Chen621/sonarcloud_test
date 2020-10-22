@@ -3,6 +3,7 @@
 import express from "express";
 import bodyParser from "body-parser";
 import _ from "./utilities/env";
+import logger from "./utilities/logger";
 import cors from "cors";
 
 const app = express();
