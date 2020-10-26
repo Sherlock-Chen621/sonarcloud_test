@@ -2,13 +2,11 @@
 
 import logger from "../utilities/logger";
 import express from "express";
+import { echo } from "./echo";
 
 const router = express.Router();
 
-router.get("",);
-router.put("", );
-router.post("",);
-router.delete("", );
+router.get("/echo", echo);
 
 router.all("*", function (req, res) {
   res.status(404).json({
